@@ -1,0 +1,161 @@
+ERROR 2021-04-15 10:43:26,741 And error has occurred at /extract
+Traceback (most recent call last):
+  File "/opt/project/services/loggers/logger.py", line 47, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/project/services/service.py", line 23, in extract
+    return self.__execute_in_concurrently(websites)
+  File "/opt/project/services/service.py", line 33, in __execute_in_concurrently
+    results.extend(task.result())
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/project/services/service.py", line 39, in __find_requester_and_get_results
+    return requester_factory.get_requester(websites_group.get('sites'))
+  File "/opt/project/services/requester_cial/factory_requester.py", line 14, in get_requester
+    raise e
+  File "/opt/project/services/requester_cial/factory_requester.py", line 12, in get_requester
+    return requester.extract_data_from_site(websites)
+  File "/opt/project/services/requester_cial/en/requester.py", line 20, in extract_data_from_site
+    'logo': self.__scraper.get_logo_url(site.get('domain')),
+  File "/opt/project/services/requester_cial/en/scraper.py", line 20, in get_logo_url
+    raise KeyError('erro teste')
+KeyError: 'erro teste'
+ERROR 2021-04-15 21:52:06,996 And error has occurred at /extract
+Traceback (most recent call last):
+  File "/opt/project/services/loggers/logger.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/project/services/service.py", line 22, in extract
+    websites = self.__get_websites_and_grouped()
+  File "/opt/project/services/service.py", line 50, in __get_websites_and_grouped
+    custom_file_open = CustomFileOpen()
+  File "/opt/project/custom_file_open.py", line 10, in __init__
+    self.__filename = self.__find_websites_file()
+  File "/opt/project/custom_file_open.py", line 26, in __find_websites_file
+    raise Exception('No file with websites was found!')
+Exception: No file with websites was found!
+ERROR 2021-04-15 23:16:50,912 And error has occurred at /extract
+Traceback (most recent call last):
+  File "/opt/project/services/loggers/logger.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/project/services/service.py", line 23, in extract
+    return self.__execute_in_concurrently(websites)
+  File "/opt/project/services/service.py", line 37, in __execute_in_concurrently
+    results.extend(task.result())
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/project/services/service.py", line 45, in __find_requester_and_get_results
+    requester_factory: RequesterFactory = self.__requester_factory_selector.get_requester_factory(
+  File "/opt/project/services/requester_cial/requester_selector.py", line 13, in get_requester_factory
+    raise ValueError("Requester not found.")
+ValueError: Requester not found.
+ERROR 2021-04-15 23:28:37,598 And error has occurred at /extract
+Traceback (most recent call last):
+  File "/opt/project/services/loggers/logger.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/project/services/service.py", line 23, in extract
+    return self.__execute_in_concurrently(websites)
+  File "/opt/project/services/service.py", line 37, in __execute_in_concurrently
+    results.extend(task.result())
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/project/services/service.py", line 47, in __find_requester_and_get_results
+    return requester_factory.get_requester(websites_group.get('sites'))
+  File "/opt/project/services/requester_cial/factory_requester.py", line 14, in get_requester
+    raise e
+  File "/opt/project/services/requester_cial/factory_requester.py", line 12, in get_requester
+    return requester.extract_data_from_site(websites)
+  File "/opt/project/services/requester_cial/ru/requester.py", line 20, in extract_data_from_site
+    'logo': self.__scraper.get_logo_url(site.get('domain')),
+  File "/opt/project/services/requester_cial/ru/scraper.py", line 30, in get_logo_url
+    logo = self.__find_tag_src(all_images_from_site)
+  File "/opt/project/services/requester_cial/ru/scraper.py", line 50, in __find_tag_src
+    return logo
+UnboundLocalError: local variable 'logo' referenced before assignment
+ERROR 2021-04-15 23:29:24,248 And error has occurred at /extract
+Traceback (most recent call last):
+  File "/opt/project/services/loggers/logger.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/project/services/service.py", line 23, in extract
+    return self.__execute_in_concurrently(websites)
+  File "/opt/project/services/service.py", line 37, in __execute_in_concurrently
+    results.extend(task.result())
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/project/services/service.py", line 47, in __find_requester_and_get_results
+    return requester_factory.get_requester(websites_group.get('sites'))
+  File "/opt/project/services/requester_cial/factory_requester.py", line 14, in get_requester
+    raise e
+  File "/opt/project/services/requester_cial/factory_requester.py", line 12, in get_requester
+    return requester.extract_data_from_site(websites)
+  File "/opt/project/services/requester_cial/ru/requester.py", line 20, in extract_data_from_site
+    'logo': self.__scraper.get_logo_url(site.get('domain')),
+  File "/opt/project/services/requester_cial/ru/scraper.py", line 30, in get_logo_url
+    logo = self.__find_tag_src(all_images_from_site)
+  File "/opt/project/services/requester_cial/ru/scraper.py", line 50, in __find_tag_src
+    return logo
+UnboundLocalError: local variable 'logo' referenced before assignment
+ERROR 2021-04-16 00:36:45,600 And error has occurred at /extract
+Traceback (most recent call last):
+  File "/opt/project/services/loggers/logger.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/project/services/service.py", line 23, in extract
+    return self.__execute_in_concurrently(websites)
+  File "/opt/project/services/service.py", line 37, in __execute_in_concurrently
+    results.extend(task.result())
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/project/services/service.py", line 47, in __find_requester_and_get_results
+    return requester_factory.get_requester(websites_group.get('sites'))
+  File "/opt/project/services/requester_cial/factory_requester.py", line 14, in get_requester
+    raise e
+  File "/opt/project/services/requester_cial/factory_requester.py", line 12, in get_requester
+    return requester.extract_data_from_site(websites)
+  File "/opt/project/services/requester_cial/en/requester.py", line 20, in extract_data_from_site
+    'logo': self.__scraper.get_logo_url(site.get('domain')),
+  File "/opt/project/services/requester_cial/en/scraper.py", line 36, in get_logo_url
+    return selector.complete_url_logo(domain, logo)
+AttributeError: 'str' object has no attribute 'complete_url_logo'
+ERROR 2021-04-16 08:28:16,788 And error has occurred at /extract
+Traceback (most recent call last):
+  File "/opt/project/services/loggers/logger.py", line 46, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/project/services/service.py", line 23, in extract
+    return self.__execute_in_concurrently(websites)
+  File "/opt/project/services/service.py", line 37, in __execute_in_concurrently
+    results.extend(task.result())
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 432, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 388, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/opt/project/services/service.py", line 47, in __find_requester_and_get_results
+    return requester_factory.get_requester(websites_group.get('sites'))
+  File "/opt/project/services/requester_cial/factory_requester.py", line 14, in get_requester
+    raise e
+  File "/opt/project/services/requester_cial/factory_requester.py", line 12, in get_requester
+    return requester.extract_data_from_site(websites)
+  File "/opt/project/services/requester_cial/en/requester.py", line 20, in extract_data_from_site
+    'logo': self.__scraper.get_logo_url(site.get('domain')),
+  File "/opt/project/services/requester_cial/en/scraper.py", line 36, in get_logo_url
+    t = selector.complete_url_logo(domain=domain, logo_url=img_url)
+AttributeError: 'str' object has no attribute 'complete_url_logo'
